@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "id": "-8942215278841193184",
+      "path": "/home/david-drexler/Documents/Obsidian",
+      "tags": [
+        "notes",
+        "personal"
+      ],
+      "recursive": true,
+      "file_types": [
+        "md",
+        "txt"
+      ],
+      "reindex_on_change": true,
+      "enabled": true,
+      "last_indexed": "2025-07-19 12:30:21.873643",
+      "next_scheduled": "2025-07-19 23:00:21.873646",
+      "file_count": 0
+    }
+  ],
+  "schedule": {
+    "time_window_start": "23:00",
+    "time_window_end": "07:00",
+    "idle_only": true,
+    "cpu_threshold": 30,
+    "ram_threshold": 50,
+    "enabled": true
+  }
+}

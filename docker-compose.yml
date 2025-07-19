@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  dex-search:
+    build: .
+    ports:
+      - "8000:8000"  # Backend API
+      - "3000:3000"  # Frontend
+      - "11434:11434"  # Ollama
+    volumes:
+      - dex_data:/home/dexuser/data
+      - ollama_data:/home/dexuser/.ollama
+    environment:
+      - PYTHONUNBUFFERED=1
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  dex_data:
+    driver: local
+  ollama_data:
+    driver: local 
